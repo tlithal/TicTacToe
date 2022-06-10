@@ -63,17 +63,7 @@ function executeTurn(element, mark) {
     let g8 = document.getElementById('grid8');
     let g9 = document.getElementById('grid9');
 
-
-    //Check to see if it was a draw
-
-    if(turnCount == 8) {
-        turn.setAttribute('class', 'alert alert-success');
-        turn.setAttribute('role', 'alert');
-        turn.innerHTML = 'It was a Draw!';
-        win = true;
-        replay.setAttribute('class', 'btn btn-success');
-        return;
-    }
+    
     //Check Diagonals for win
 
     if(g1.innerHTML == g5.innerHTML && g5.innerHTML == g9.innerHTML && g1.innerHTML != '') {
@@ -172,6 +162,17 @@ function executeTurn(element, mark) {
         turn.setAttribute('class', 'alert alert-success');
         turn.setAttribute('role', 'alert');
         turn.innerHTML = `Player ${element.innerHTML} is the Winner!`;
+        win = true;
+        replay.setAttribute('class', 'btn btn-success');
+        return;
+    }
+
+    //Check to see if it was a Draw
+
+    if(turnCount >= 8) {
+        turn.setAttribute('class', 'alert alert-success');
+        turn.setAttribute('role', 'alert');
+        turn.innerHTML = 'It was a Draw!';
         win = true;
         replay.setAttribute('class', 'btn btn-success');
         return;
