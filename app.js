@@ -6,7 +6,11 @@ let turnCount = 0;
 let playerTurn = 0;
 let win = false;
 
+//Runs the function to add symbols on click of any of the grids on the board
+
 $('.grid').on('click', function() {
+
+    //Makes sure the space is free and that there is no winner
     if(!win && this.innerHTML == '') {
         if(playerTurn == 0) {
             executeTurn(this, 'X');
@@ -25,10 +29,12 @@ $('.grid').on('click', function() {
     }
 });
 
+//Allows the replay button to clear the board and restart the game
 replay.addEventListener('click', () => {
     resetGame();
 });
 
+//Function to clear the board
 function resetGame() {
 
     for(let i = 0; i < board.length; i++) {
@@ -47,12 +53,15 @@ function resetGame() {
     winnerNotice.innerHTML = '';
 }
 
+//Function to place the symbol in the clicked grid
 function executeTurn(element, mark) {
     element.innerHTML = mark;
     element.classList.add("filled");
     checkWin(element);
     turnCount++;
 }
+
+//Checks win conditions
 
  function checkWin(element) {
     let g1 = document.getElementById('grid1');
