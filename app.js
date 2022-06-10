@@ -9,14 +9,14 @@ $('.grid').on('click', function() {
     if(!win && this.innerHTML == '') {
         if(playerTurn == 0) {
             executeTurn(this, 'X');
-            if(!win && turnCount < 8) {
+            if(!win && turnCount <= 8) {
                 turn.innerHTML = 'Player O Turn';
                 playerTurn = 1;
             }
         }
         else {
             executeTurn(this, 'O');
-            if(!win && turnCount < 8) {
+            if(!win && turnCount <= 8) {
                 turn.innerHTML = 'Player X Turn';
                 playerTurn = 0;
             }
