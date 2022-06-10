@@ -1,6 +1,7 @@
 let board = document.querySelectorAll(".grid");
 let turn = document.getElementById('turn');
 let replay = document.getElementById('replay');
+let winnerNotice = document.getElementById('winnerNotification');
 let turnCount = 0;
 let playerTurn = 0;
 let win = false;
@@ -43,6 +44,7 @@ function resetGame() {
     win = false;
     playerTurn = 0;
     turnCount = 0;
+    winnerNotice.innerHTML = '';
 }
 
 function executeTurn(element, mark) {
@@ -72,10 +74,11 @@ function executeTurn(element, mark) {
         g9.classList.add('winGrid');
         turn.setAttribute('class', 'alert alert-success');
         turn.setAttribute('role', 'alert');
-        console.log(element.innerHTML);
         turn.innerHTML = `Player ${element.innerHTML} is the Winner!`;
         win = true;
         replay.setAttribute('class', 'btn btn-success');
+        winnerNotice.append(`Player ${element.innerHTML} is the Winner!`);
+        $('#winnerNotice').modal('show');
         return;
     }
 
@@ -88,6 +91,8 @@ function executeTurn(element, mark) {
         turn.innerHTML = `Player ${element.innerHTML} is the Winner!`;
         win = true;
         replay.setAttribute('class', 'btn btn-success');
+        winnerNotice.append(`Player ${element.innerHTML} is the Winner!`);
+        $('#winnerNotice').modal('show');
         return;
     }
 
@@ -102,6 +107,8 @@ function executeTurn(element, mark) {
         turn.innerHTML = `Player ${element.innerHTML} is the Winner!`;
         win = true;
         replay.setAttribute('class', 'btn btn-success');
+        winnerNotice.append(`Player ${element.innerHTML} is the Winner!`);
+        $('#winnerNotice').modal('show');
         return;
     }
 
@@ -114,6 +121,8 @@ function executeTurn(element, mark) {
         turn.innerHTML = `Player ${element.innerHTML} is the Winner!`;
         win = true;
         replay.setAttribute('class', 'btn btn-success');
+        winnerNotice.append(`Player ${element.innerHTML} is the Winner!`);
+        $('#winnerNotice').modal('show');
         return;
     }
 
@@ -126,6 +135,8 @@ function executeTurn(element, mark) {
         turn.innerHTML = `Player ${element.innerHTML} is the Winner!`;
         win = true;
         replay.setAttribute('class', 'btn btn-success');
+        winnerNotice.append(`Player ${element.innerHTML} is the Winner!`);
+        $('#winnerNotice').modal('show');
         return;
     }
 
@@ -140,6 +151,8 @@ function executeTurn(element, mark) {
         turn.innerHTML = `Player ${element.innerHTML} is the Winner!`;
         win = true;
         replay.setAttribute('class', 'btn btn-success');
+        winnerNotice.append(`Player ${element.innerHTML} is the Winner!`);
+        $('#winnerNotice').modal('show');
         return;
     }
 
@@ -152,6 +165,8 @@ function executeTurn(element, mark) {
         turn.innerHTML = `Player ${element.innerHTML} is the Winner!`;
         win = true;
         replay.setAttribute('class', 'btn btn-success');
+        winnerNotice.append(`Player ${element.innerHTML} is the Winner!`);
+        $('#winnerNotice').modal('show');
         return;
     }
 
@@ -164,6 +179,8 @@ function executeTurn(element, mark) {
         turn.innerHTML = `Player ${element.innerHTML} is the Winner!`;
         win = true;
         replay.setAttribute('class', 'btn btn-success');
+        winnerNotice.append(`Player ${element.innerHTML} is the Winner!`);
+        $('#winnerNotice').modal('show');
         return;
     }
 
@@ -175,6 +192,8 @@ function executeTurn(element, mark) {
         turn.innerHTML = 'It was a Draw!';
         win = true;
         replay.setAttribute('class', 'btn btn-success');
+        winnerNotice.append('It was a Draw!');
+        $('#winnerNotice').modal('show');
         return;
     }
 }

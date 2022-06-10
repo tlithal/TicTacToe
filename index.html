@@ -39,6 +39,25 @@
    <div class="container d-flex justify-content-center align-items-center">
        <button type ="button" id="replay" class="btn btn-secondary">Play Again</button>
    </div>
+
+   <div class="modal fade" id="winnerNotice" tabindex="-1" aria-labelledby="winnerNotification" aria-hidden="true">
+       <div class="modal-dialog">
+           <div class="modal-content">
+               <div class="modal-header text-center">
+                   <h2 class="modal-title w-100">Congratulations</h2>
+                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+               </div>
+               <div class="modal-body">
+                   <div class="container-fluid">
+                       <div id="winnerNotification" class="d-flex justify-content-center align-items-center"></div>
+                   </div>
+               </div>
+               <div class="modal-footer">
+                   <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+               </div>
+           </div>
+       </div>
+   </div>
     
 
     <script src="node_modules/jquery/dist/jquery.js"></script>

@@ -43,6 +43,11 @@
     font-size: 50px;
 }
 
+#winnerNotification {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 20px;
+}
+
 #turn {
     text-align: center;
     justify-content: center;
