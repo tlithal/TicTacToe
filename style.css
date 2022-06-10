@@ -1,0 +1,96 @@
+.board {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    height: 300px;
+    grid-template-columns: auto auto auto;
+}
+.grid {
+    display: flex;
+    border: 2px solid black;
+    font-size: 80px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    
+}
+
+.grid:hover {
+    cursor: pointer;
+    background-color: cornsilk;
+}
+
+.filled:hover {
+    cursor: not-allowed;
+}
+
+.winGrid {
+    background-color: chartreuse;
+}
+
+.winGrid:hover {
+    background-color: chartreuse;
+}
+
+#title {
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    font-size: 50px;
+}
+
+#turn {
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    font-size: 30px;
+}
+
+#winner {
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+#grid1 {
+    border-left: 0;
+    border-top: 0;
+}
+
+#grid2 {
+    border-top: 0;
+}
+
+#grid3 {
+    border-right: 0;
+    border-top: 0;
+}
+
+#grid4 {
+    border-left: 0;
+}
+
+#grid6 {
+    border-right: 0;
+}
+
+#grid7 {
+    border-left: 0;
+    border-bottom: 0;
+}
+
+#grid8 {
+    border-bottom: 0;
+}
+
+#grid9 {
+    border-right: 0;
+    border-bottom: 0;
+}
+
